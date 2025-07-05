@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>✓ My To-Do List</h1>
+            <p>Stay organized and productive!</p>
+        </div>
+
+        <div class="input-section">
+            <div class="input-container">
+                <input type="text" id="taskInput" placeholder="Enter your task..." maxlength="100">
+                <button id="addBtn">Add Task</button>
+            </div>
+            <div class="priority-section">
+                <span style="font-weight: bold; color: #666;">Priority:</span>
+                <button class="priority-btn high" data-priority="high">High</button>
+                <button class="priority-btn medium" data-priority="medium">Medium</button>
+                <button class="priority-btn low active" data-priority="low">Low</button>
+            </div>
+        </div>
+
+        <div class="task-list" id="taskList">
+            <div class="empty-state" id="emptyState">
+                <div style="font-size: 48px; margin-bottom: 20px;">📝</div>
+                <h3>No tasks yet!</h3>
+                <p>Add your first task above to get started.</p>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-number" id="totalTasks">0</div>
+                <div class="stat-label">Total Tasks</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" id="completedTasks">0</div>
+                <div class="stat-label">Completed</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" id="pendingTasks">0</div>
+                <div class="stat-label">Pending</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="logic.js"></script>
+</body>
+</html>
